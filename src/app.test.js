@@ -1,7 +1,5 @@
 const app = require('./app');
 const supertest = require('supertest');
-const { it } = require('node:test');
-const exp = require('constants');
 const request = supertest(app);
 
 describe('/test endpoint', () => {
