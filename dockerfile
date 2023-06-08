@@ -1,7 +1,12 @@
 FROM node:latest
-RUN mkdir -p /src/app
-WORKDIR /src/app
-COPY microservices/SearchService .
+
+WORKDIR /usr/src/app
+
+COPY package.json ./
+
 RUN npm install
-EXPOSE 3003
-CMD [ "npm", "start" ]
+
+COPY . .
+
+EXPOSE 4000
+CMD [ "node", "index.js" ]
