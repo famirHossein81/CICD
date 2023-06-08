@@ -1,4 +1,3 @@
-const { describe } = require('yargs');
 const app = require('./app');
 const supertest = require('supertest');
 const { it } = require('node:test');
