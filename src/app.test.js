@@ -34,3 +34,11 @@ describe('/test/fourth', () => {
         expect(response.text).toBe('Welcome to the fourth Page');
     })
 });
+
+describe('/test/fifth', () => {
+    it('should return a response',async()=>{
+        const response = await request.get('/test/fifth');
+        expect(response.status).toBe(200);
+        expect(response.text).toBe('Welcome to the fifth Page');
+    })
+});
